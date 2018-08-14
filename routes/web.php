@@ -60,6 +60,28 @@ Route::group(['namespace' => 'Backend'], function () {
 	Route::delete('siswa/delete/{id}', array('as' => 'backend-siswa-delete', 'uses' => 'SiswasController@destroy'));
 
 
+	//ekstrakulikuler
+	
+	Route::get('datatables_ekstrakulikuler', array('as' => 'datatables-data-ekstrakulikuler', 'uses' => 'ekstrakulikulerController@anyData'));
+	Route::get('ekstrakulikuler', array('as' => 'backend-ekstrakulikuler-index', 'uses' => 'ekstrakulikulerController@index'));
+	Route::get('ekstrakulikuler/edit/{id}', array('as' => 'backend-ekstrakulikuler-edit', 'uses' => 'ekstrakulikulerController@edit'));
+	Route::get('ekstrakulikuler/update/{id}', array('as' => 'backend-ekstrakulikuler-update', 'uses' => 'ekstrakulikulerController@update'));
+	Route::get('ekstrakulikuler/create', array('as' => 'backend-ekstrakulikuler-create', 'uses' => 'ekstrakulikulerController@create'));
+	Route::get('ekstrakulikuler/store', array('as' => 'backend-ekstrakulikuler-store', 'uses' => 'ekstrakulikulerController@store'));
+	Route::delete('ekstrakulikuler/delete/{id}', array('as' => 'backend-ekstrakulikuler-delete', 'uses' => 'ekstrakulikulerController@destroy'));
+
+
+	//kelas
+	
+	Route::get('datatables_kelas', array('as' => 'datatables-data-kelas', 'uses' => 'kelasController@anyData'));
+	Route::get('kelas', array('as' => 'backend-kelas-index', 'uses' => 'kelasController@index'));
+	Route::get('kelas/edit/{id}', array('as' => 'backend-kelas-edit', 'uses' => 'kelasController@edit'));
+	Route::get('kelas/update/{id}', array('as' => 'backend-kelas-update', 'uses' => 'kelasController@update'));
+	Route::get('kelas/create', array('as' => 'backend-kelas-create', 'uses' => 'kelasController@create'));
+	Route::get('kelas/store', array('as' => 'backend-kelas-store', 'uses' => 'kelasController@store'));
+	Route::delete('kelas/delete/{id}', array('as' => 'backend-kelas-delete', 'uses' => 'kelasController@destroy'));
+
+
 	//Article
 	Route::get('article', array('as' => 'backend-article-index', 'uses' => 'ArticlesController@index'));
 	Route::get('article/create', array('as' => 'admin-create-article', 'uses' => 'ArticlesController@create'));
