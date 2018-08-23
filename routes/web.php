@@ -82,6 +82,19 @@ Route::group(['namespace' => 'Backend'], function () {
 	Route::delete('kelas/delete/{id}', array('as' => 'backend-kelas-delete', 'uses' => 'kelasController@destroy'));
 
 
+
+	//guru
+	
+	Route::get('datatables_guru', array('as' => 'datatables-data-guru', 'uses' => 'GuruController@anyData'));
+	Route::get('guru', array('as' => 'backend-guru-index', 'uses' => 'guruController@index'));
+	Route::get('guru/edit/{id}', array('as' => 'backend-guru-edit', 'uses' => 'guruController@edit'));
+	Route::get('guru/update/{id}', array('as' => 'backend-guru-update', 'uses' => 'guruController@update'));
+	Route::get('guru/create', array('as' => 'backend-guru-create', 'uses' => 'guruController@create'));
+	Route::get('guru/store', array('as' => 'backend-guru-store', 'uses' => 'guruController@store'));
+	Route::delete('guru/delete/{id}', array('as' => 'backend-guru-delete', 'uses' => 'guruController@destroy'));
+
+
+
 	//Article
 	Route::get('article', array('as' => 'backend-article-index', 'uses' => 'ArticlesController@index'));
 	Route::get('article/create', array('as' => 'admin-create-article', 'uses' => 'ArticlesController@create'));
