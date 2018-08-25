@@ -36,13 +36,14 @@
             <li id="btn_ekstrakulikuler"><a href="#"><span>Ekstrakulikuler</span></a></li>
             <li id="btn_kelas"><a href="#"><span>Kelas</span></a></li>
             <li id="btn_guru"><a href="#"><span>Guru</span></a></li>
-            <li class="treeview">
+            <li id="btn_galeri"><a href="#"><span>Galeri</span></a></li>
+            <!-- <li class="treeview">
                 <a href="#"><span>Multilevel</span> <i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu">
                     <li><a href="#">Link in level 2</a></li>
                     <li><a href="#">Link in level 2</a></li>
                 </ul>
-            </li>
+            </li> -->
         </ul><!-- /.sidebar-menu -->
     </section>
     <!-- /.sidebar -->

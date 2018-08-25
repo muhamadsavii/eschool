@@ -95,6 +95,19 @@ Route::group(['namespace' => 'Backend'], function () {
 
 
 
+	//galeri
+	
+	Route::get('galeri', array('as' => 'backend-galeri-index', 'uses' => 'galeriController@index'));
+	Route::get('galeri/edit/{id}', array('as' => 'backend-galeri-edit', 'uses' => 'galeriController@edit'));
+	Route::get('galeri/update/{id}', array('as' => 'backend-galeri-update', 'uses' => 'galeriController@update'));
+	Route::get('galeri/create', array('as' => 'backend-galeri-create', 'uses' => 'galeriController@create'));
+	Route::get('galeri/store', array('as' => 'backend-galeri-store', 'uses' => 'galeriController@store'));
+	Route::delete('galeri/delete/{id}', array('as' => 'backend-galeri-delete', 'uses' => 'galeriController@destroy'));
+	Route::get('datatables_galeri', array('as' => 'datatables-data-galeri', 'uses' => 'galeriController@anyData'));
+	Route::get('galeri/form_image/{id}', array('as' => 'backend-galeri-upload', 'uses' => 'ArticlesController@form_image'));
+
+
+
 	//Article
 	Route::get('article', array('as' => 'backend-article-index', 'uses' => 'ArticlesController@index'));
 	Route::get('article/create', array('as' => 'admin-create-article', 'uses' => 'ArticlesController@create'));

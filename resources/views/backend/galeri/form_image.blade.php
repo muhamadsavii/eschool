@@ -13,6 +13,10 @@
               <input type="text" name="content[image][]" class="form-control" readonly>
           </div>
           <img id='img-upload-{{$id}}' class="img-upload" />
+          <br>
+          <div>
+              {{ Form::textarea('content[caption][]',null,['size'=>'50x3']) }}
+          </div>
         </div>
         <div class="col-sm-2"> 
           <button type="button" class="btn btn-success add-img">

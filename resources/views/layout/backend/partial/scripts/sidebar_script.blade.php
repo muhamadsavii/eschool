@@ -67,6 +67,23 @@
     });
   }),
 
+  $(document).on('click', '#btn_galeri', function(){
+    var base_url = {!! json_encode(url('/')) !!};
+    $.ajax({
+        url: base_url +'/galeri',
+        type: "GET",
+        async:true,
+        processData: true,
+        complete:function() {
+        },
+        success: function (data) {
+            $('.content').html(data);
+        },
+        error: function(response) {
+        }
+    });
+  }),
+
 
   $(document).on('click', '#btn_home', function(){
     var base_url = {!! json_encode(url('/')) !!};
